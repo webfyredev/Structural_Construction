@@ -24,18 +24,18 @@ export default function Projects(){
             
             <ProjectsSection />
             
-            <div className="w-full md:h-120 relative h-auto">
-                <img src={projectImg} className="w-full md:h-full h-210 object-cover"/>
-                <div className="absolute top-0 w-full md:h-full h-auto inset-0 bg-black/60 flex items-center justify-center">
-                    <div className="w-[90%] md:w-[80%] md:h-[85%] h-full flex flex-col items-center p-5">
-                        <motion.h3 {...scrollUp} className="my-5 text-2xl md:text-3xl font-bold text-white text-center">
+            <div className="w-full lg:h-120 relative h-auto">
+                <img src={projectImg} className="w-full lg:h-full h-250 md:h-auto object-cover"/>
+                <div className="absolute top-0 w-full lg:h-full md:h-full h-auto inset-0 bg-black/60 flex items-center justify-center">
+                    <div className="w-[90%] lg:w-[80%] lg:h-[85%] h-auto flex flex-col items-center p-5">
+                        <motion.h3 {...scrollUp} className="my-5 text-xl lg:text-3xl md:text-2xl font-bold text-white text-center">
                            Build  Your  Projects with <br />
                             the best and capable team
                         </motion.h3>
-                        <motion.div {...scrollUp} className=" w-full md:h-[70%] h-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 p-3 mt-3">
-                            <motion.div {...cardHover} className="md:p-4 p-8 ml-8 md:ml-0 flex flex-col items-center w-[85%] md:h-[95%] bg-white rounded-sm mb-3">
+                        <motion.div {...scrollUp} className=" w-full lg:h-[70%] h-auto md:h-auto  grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-3 mt-3">
+                            <motion.div {...cardHover} className="md:p-4 p-8 ml-8 md:ml-0 flex flex-col items-center w-[85%] lg:h-[95%] bg-white rounded-sm mb-3">
                                 <FaCogs  className="mt-5 text-orange-500 group-hover:text-white" size={35}/>
-                                <h3 className="text-xl font-semibold text-sm mt-2 text-[#262A3F]">
+                                <h3 className="lg:text-xl font-semibold md:text-lg text-md mt-2 text-[#262A3F]">
                                     Outstanding Services
                                 </h3>
                                 <p className="text-center text-xs mt-2 group-hover:text-gray-200">
@@ -44,7 +44,7 @@ export default function Projects(){
                             </motion.div>
                             <motion.div {...cardHover} className="md:p-4 p-8 ml-8 md:ml-0 flex flex-col items-center w-[85%] h-[95%] bg-white rounded-sm mb-3">
                                 <FaCogs  className="mt-5 text-orange-500" size={35}/>
-                                <h3 className="text-xl font-semibold text-sm mt-2 text-[#262A3F]">
+                                <h3 className="lg:text-xl font-semibold md:text-lg text-md mt-2 text-[#262A3F]">
                                     Outstanding Services
                                 </h3>
                                 <p className="text-center text-xs mt-2">
@@ -53,7 +53,7 @@ export default function Projects(){
                             </motion.div>
                             <motion.div {...cardHover} className="md:p-4 p-8 ml-8 md:ml-0 flex flex-col items-center w-[85%] h-[95%] bg-white rounded-sm">
                                 <FaCogs  className="mt-5 text-orange-500" size={35}/>
-                                <h3 className="text-xl font-semibold text-sm mt-2 text-[#262A3F]">
+                                <h3 className="lg:text-xl font-semibold md:text-lg text-md mt-2 text-[#262A3F]">
                                     Outstanding Services
                                 </h3>
                                 <p className="text-center text-xs mt-2">
@@ -64,8 +64,8 @@ export default function Projects(){
                     </div>
                 </div>
             </div>
-            <div className="w-full md:h-110 h-auto md:flex md:flex-row flex flex-col p-5 justify-between mt-15">
-            <div className="md:w-[50%] w-full h-auto  md:h-full p-5">
+            <div className="w-full lg:h-110 h-auto lg:flex lg:flex-row flex flex-col p-5 justify-between mt-15">
+            <div className="lg:w-[50%] w-full h-auto  lg:h-full p-5">
                 <motion.h3 {...scrollUp} className="text-2xl font-semibold bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent h-10">
                     Building Products That Last a Lifetime
                 </motion.h3>
@@ -99,8 +99,8 @@ export default function Projects(){
                     </motion.div>
                 </motion.div>
             </div>
-            <div className="w-full h-auto md:w-[45%] md:h-full md:flex md:flex-row flex flex-col">
-                <div className="md:w-[45%] md:h-full w-full h-auto  flex flex-col px-3 justify-evenly mb-5 md:mb-0">
+            <div className="w-full h-auto lg:w-[45%] lg:h-full lg:flex lg:flex-row flex flex-col md:flex-col border-3 border-red-500">
+                <div className="lg:w-[45%] lg:h-full w-full h-auto md:flex-row lg:flex-col flex flex-col px-3 justify-evenly mb-5 md:mb-0 border-2 border-green-500">
                     <motion.img {...cardZoomIn} {...scrollRight} src={projectImg2} className="md:w-full md:h-[45%] object-cover hover:cursor-pointer hover:rounded-sm mb-2 md:mb-0"/>
                     <motion.img {...cardZoomIn} {...scrollRight} src={projectImg3}  className="md:w-full md:h-[45%] object-cover hover:cursor-pointer hover:rounded-sm mb-2 md:mb-0"/>
 

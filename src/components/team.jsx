@@ -61,7 +61,7 @@ export default function Teams(){
                         Our strength lies in our people. Each team member brings innovation,
                         experience, and passion to every project we deliver.
                     </motion.p>
-                    <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    <div className="w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                         {team.map((data) =>(
                             <motion.div {...scrollRight} key={data.id} className="w-[95%] h-90 relative group overflow-hidden shadow-md hover:shadow-xl hover:rounded-sm mb-10 md:mb-0">
                                 <img src={data.image} className="w-full h-[80%] object-cover group-hover:scale-105 transition-transform duration-700"/>

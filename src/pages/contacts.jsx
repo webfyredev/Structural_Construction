@@ -18,16 +18,16 @@ export default function Contacts(){
                 page = 'Contacts'
                 img = {contactsBg}
             />
-            <div className="w-full md:h-120 h-auto p-5 md:flex md:flex-row flex flex-col justify-evenly items-center mt-10">
-                <div className="w-full md:w-[45%] h-full p-5 flex flex-col">
-                <h3 className="text-3xl mt-5 mb-3 font-semibold tex-[#262A3F]">
+            <div className="w-full lg:h-120 h-auto p-5 lg:flex lg:flex-row flex flex-col justify-evenly items-center mt-10">
+                <div className="w-full lg:w-[45%] h-full p-5 flex flex-col">
+                <h3 className="md:text-2xl text-xl lg:text-3xl mt-5 mb-3 font-semibold tex-[#262A3F]">
                     Get in touch with us &
                     send us message today!
                 </h3>
-                <p className="text-justify text-sm mb-5">
+                <p className="text-justify text-xs md:text-sm mb-5">
                     Redison is a different kind of architecture practice. Founded by LoganCee in 1991, we’re an employee-owned firm pursuing a democratic design process that values everyone’s input.
                 </p>
-                <p className="text-justify text-sm mb-5">
+                <p className="text-justify text-xs md:text-sm mb-5">
                     C-11 Legacy Ariston Apartment, Mahalaxmi Layout, Ananthapura, Yelahanka, Bangalore- 560064 Mobile: 08497-038877
                 </p>
                 <p className="mt-3 flex items-center text-[#262A5F]">
@@ -43,7 +43,7 @@ export default function Contacts(){
                     <FaGlobe className="mr-2 text-orange-500"/> <span className="text-[#262A3F]">Website</span>: <Link to="http://www.structura.com" className="ml-2 text-[#262A4F] font-semibold hover:text-orange-500">Structura &amp; Buildify</Link>
                 </p>
                 </div>
-                <div className="w-full md:w-[45%] h-full px-3 py-10 shadow-sm hover:shadow-md hover:rounded-sm transition-all duration-300">
+                <div className="w-full lg:w-[45%] h-full px-3 py-10 shadow-sm hover:shadow-md hover:rounded-sm transition-all duration-300">
                     <form action="" className="w-full h-full">
                         <div className="w-full h-auto flex justify-evenly items-center mb-5">
                             <input type="text" placeholder="Name:"  className="w-[48%] h-11 text-sm p-2 text-[#262A3F] outline-none border-1 border-[#262A4F] hover:rounded-sm transition-all duration-500 hover:border-1 hover:border-orange-500"/>
