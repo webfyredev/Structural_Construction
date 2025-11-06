@@ -47,7 +47,7 @@ export default function Blog(){
                     <div className="absolute lg:top-55 md:top-45 top-60 top-[40%] right-7 text-xs font-semibold rounded-sm hover:cursor-pointer text-white px-7 py-1.5 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 bg-gradient-to-r from-orange-500 to-orange-400 z-1">
                         {data.category}
                     </div>
-                    <img src={data.image} className="group-hover:rounded-md transition-all group-hover:scale-103" />
+                    <img src={data.image} className="rounded-md transition-all group-hover:scale-103" />
                     <h2 className="my-3 font-semibold text-[#262A4F]">{data.title}</h2>
                     <p className="text-sm text-gray-600">{data.description}</p>
                     <Link className="mt-5 text-sm bg-gradient-to-r from-orange-500 to-orange-400 text-transparent bg-clip-text font-semibold h-10 flex">

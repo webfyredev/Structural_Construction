@@ -54,9 +54,9 @@ export default function ServicesComponents(){
                 <motion.p {...scrollUpNext} className="text-gray-600 max-w-2xl mx-auto mb-12 text-center text-xs md:text-sm">Showcasing our commitment to quality construction and design excellence.</motion.p>
             </div>
             {/* <h2 className="text-3xl font-semibold w-full h-15 flex items-center justify-center mb-5 bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent">Our Services</h2> */}
-            <div className="mt-5 w-full h-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:px-10 px-5 py-5">
+            <div className="mt-5 w-full h-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:px-10 p-5 gap-5">
                 {services.map((data) =>(
-                    <motion.div {...scrollRight} className="w-[90%] h-85 mb-10 relative group">
+                    <motion.div {...scrollRight} className="w-full lg:w-[90%] h-85 mb-10 relative group">
                         <img src={data.img} className="w-full h-full object-cover group-hover:scale-95 transition-all duration-500"/>
                         <div className="absolute inset-0 bg-black/60 w-full h-[18%] mt-70">
                             <div className="relative w-full h-full">

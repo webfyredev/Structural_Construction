@@ -54,16 +54,16 @@ const team = [
 export default function Teams(){
     return (
         <>
-            <section className="py-20 bg-white px-10">
+            <section className="py-20 bg-white lg:px-10 px-5">
                 <div className="mx-auto text-ceter">
                     <motion.h2 {...scrollUp} className="text-3xl font-bold mb-2 text-orange-500 text-center">Meet our Expert Team</motion.h2>
                     <motion.p {...scrollUpNext} className="text-gray-600 max-w-2xl mx-auto mb-12 text-center text-sm">
                         Our strength lies in our people. Each team member brings innovation,
                         experience, and passion to every project we deliver.
                     </motion.p>
-                    <div className="w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                    <div className="w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                         {team.map((data) =>(
-                            <motion.div {...scrollRight} key={data.id} className="w-[95%] h-90 relative group overflow-hidden shadow-md hover:shadow-xl hover:rounded-sm mb-10 md:mb-0">
+                            <motion.div {...scrollRight} key={data.id} className="w-[95%] h-90 relative group overflow-hidden shadow-md hover:shadow-xl rounded-sm mb-10 md:mb-0">
                                 <img src={data.image} className="w-full h-[80%] object-cover group-hover:scale-105 transition-transform duration-700"/>
                                 <div className="absolute top-4 right-4 flex-flex-col gap-2 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 bg-gradient-to-r from-orange-500 to-orange-400 px-4 py-1 rounded-sm">
                                     <Link to={data.f_url} className="text-white p-2 rounded-full">

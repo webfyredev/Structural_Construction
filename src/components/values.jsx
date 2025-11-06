@@ -44,7 +44,7 @@ export default function Values (){
             </div> */}
             <motion.div {...scrollLeft} className="w-full h-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-5">
             {values.map((data) =>(
-                <motion.div {...cardHover}  className="md:w-[95%] md:h-full w-[90%] mb-10 md:mb-0 h-60 flex flex-col items-center p-5 shadow-md">
+                <motion.div {...cardHover}  className="md:w-[95%] md:h-full w-full mb-10 md:mb-0 h-60 flex flex-col items-center p-5 shadow-md">
                     <div className="mb-5 mt-3">
                     {data.icon}
                     </div>

@@ -13,6 +13,13 @@ body{
 .swiper-button-next{
   @apply !right-5
 }
+
+@media (max-width: 640px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
 @media (max-width:768px) {
     .swiper-button-prev{
       @apply !left-0

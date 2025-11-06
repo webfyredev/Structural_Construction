@@ -62,10 +62,10 @@ export default function ProjectsSection() {
             <motion.h2 {...scrollUp} className="text-3xl font-bold mt-3 bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent h-10">Our Recent Projects</motion.h2>
             <motion.p {...scrollUpNext} className="text-gray-600 max-w-2xl  mb-5 md:mb-5 text-center text-xs md:text-sm">Showcasing our commitment to quality construction and design excellence.</motion.p>
         </div>
-        <div className="w-full h-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:p-5 p-2">
+        <div className="w-full h-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-5  gap-5">
             {projects.map((data, index) => (
-                <motion.div {...scrollLeft} className="w-[95%] shadow-md group flex flex-col p-5 mb-5">
-                    <motion.img src={data.img} className="w-full md:h-full mb-3 cursor-pointer hover:rounded-sm group-hover:scale-105 transition-transform duration-700"/>
+                <motion.div {...scrollLeft} className="w-full shadow-md group flex flex-col p-5 mb-5">
+                    <motion.img src={data.img} className="w-full h-60 lg:h-70 mb-3 cursor-pointer rounded-sm group-hover:scale-105 transition-transform duration-700"/>
                     <div className="w-10 h-15 rounded-full mb-3 flex items-center justify-center text-xl text-orange-500">
                         {data.icon}
                     </div>

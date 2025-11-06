@@ -112,7 +112,7 @@ export default function Footer(){
                 </div>
                 <div className="w-full h-0.2 my-2 border-1 border-[#334155]"></div>
                 <div className="w-full h-auto flex flex-row justify-between items-center">
-                    <p className="text-sm text-white">&copy; {dates} Structura. All right reserved</p>
+                    <p className="text-[10px] md:text-sm text-white">&copy; {dates} Structura. All right reserved</p>
                     <div className="w-35 h-8 flex flex-row items-center justify-evenly">
                     <Link to="#">
                         <FaFacebook  className="text-white hover:cursor-pointer hover:text-orange-400 transition-all duration-300"/>

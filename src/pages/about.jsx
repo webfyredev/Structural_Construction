@@ -38,7 +38,7 @@ export default function About (){
 
                     </div>
                 </motion.div>
-                <motion.img {...scrollRight} src={aboutImg}  className="rounded-sm sm:h-[]"/>
+                <motion.img {...scrollRight} src={aboutImg}  className="rounded-sm lg:h-full h-70 md:h-100 object-cover"/>
 
             </div>
             <Features />
