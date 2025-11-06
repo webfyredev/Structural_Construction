@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import NavBar from '../components/navbar'
 import HeroSlider from '../components/heroSlider'
@@ -18,8 +18,11 @@ import Blog from '../components/blog';
 import Footer from '../components/footer';
 import ScrollToUpBtn from '../components/scrollToTop';
 export default function Home() {
-
+  useEffect(() =>{
+    document.title = 'Structura_Construction'
+  }, []);
   return (
+
     <>
     <NavBar />
     <HeroSlider />

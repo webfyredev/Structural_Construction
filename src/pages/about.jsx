@@ -13,7 +13,11 @@ import { GiBrickWall } from "react-icons/gi";
 import {RiLightbulbFlashFill} from "react-icons/ri"
 import ScrollToUpBtn from "../components/scrollToTop";
 import Footer from "../components/footer";
+import { useEffect } from "react";
 export default function About (){
+    useEffect(() =>{
+        document.title = 'About | Structura_Construction'
+    },[]);
     return(
         <>
             <NavBar />

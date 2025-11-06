@@ -10,10 +10,14 @@ import { FaHammer, FaBuilding, FaCogs } from "react-icons/fa";
 import { cardHover, cardTaps, scrollLeft, scrollRight, cardZoomIn, scrollUp, scrollUpNext} from "../animations/motion";
 import { motion } from "framer-motion";
 import Footer from "../components/footer";
+import { useEffect } from "react";
 
 
 
 export default function Projects(){
+    useEffect(() =>{
+        document.title = 'Projects | Structura_Construction'
+    }, []);
     return(
         <>
             <NavBar />

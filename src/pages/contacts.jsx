@@ -8,9 +8,13 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { cardHover, cardTaps } from "../animations/motion";
 import Footer from "../components/footer";
+import { useEffect } from "react";
 
 
 export default function Contacts(){
+    useEffect(() =>{
+        document.title = 'Contacts | Structura_Construction'
+    },[]);
     return(
         <>
             <NavBar />
