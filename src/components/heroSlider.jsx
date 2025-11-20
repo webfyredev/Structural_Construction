@@ -66,7 +66,7 @@ function SlideInner({ slide }) {
     >
       <div className="absolute inset-0 bg-black/50" />
       <div
-        className={`relative z-10 h-full flex flex-col justify-center px-6 lg:px-24 ${alignMap[slide.align]}`}
+        className={`relative z-10 w-full h-full flex flex-col justify-center px-6 lg:px-24 ${alignMap[slide.align]}`}
       >
         <motion.h3
           className="text-[#F5A623] text-sm md:text-xl mb-2"
