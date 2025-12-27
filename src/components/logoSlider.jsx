@@ -48,7 +48,7 @@ export default function PartnersSlider() {
               <img
                 src={logo}
                 alt={`Partner ${index + 1}`}
-                className="md:w-[80%] w-[60%] h-20 md:h-30 transition-all duration-300 object-cover"
+                className="md:w-[80%] w-[60%] h-20 md:h-30 transition-all duration-300 object-cover hover:scale-110"
               />
             </div>
           </SwiperSlide>

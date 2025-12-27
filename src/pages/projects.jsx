@@ -27,47 +27,6 @@ export default function Projects(){
             />
             
             <ProjectsSection />
-            
-            <div className="w-full lg:h-120 relative h-auto border-1">
-                <img src={projectImg} className="w-full lg:h-full md:h-150 h-250 object-cover"/>
-                <div className="absolute top-0 w-full lg:h-full md:h-full h-auto inset-0 bg-black/60 flex items-center justify-center">
-                    <div className="w-[90%] lg:w-[80%] lg:h-[85%] h-auto flex flex-col items-center p-5">
-                        <motion.h3 {...scrollUp} className="my-5 text-xl lg:text-3xl md:text-2xl font-bold text-white text-center">
-                           Build  Your  Projects with <br />
-                            the best and capable team
-                        </motion.h3>
-                        <motion.div {...scrollUp} className="w-full lg:h-[70%] h-auto md:h-auto  grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-3 mt-3 gap-5">
-                            <motion.div {...cardHover} className="md:p-4 p-8 flex flex-col items-center w-full md:w-[95%] lg:h-[95%] bg-white rounded-sm mb-3">
-                                <FaCogs  className="mt-5 text-orange-500 group-hover:text-white" size={35}/>
-                                <h3 className="lg:text-xl font-semibold md:text-lg text-md mt-2 text-[#262A3F]">
-                                    Outstanding Services
-                                </h3>
-                                <p className="text-center text-xs mt-2 group-hover:text-gray-200 mb-5">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur temporibus nostrum vero.
-                                </p>
-                            </motion.div>
-                            <motion.div {...cardHover} className="md:p-4 p-8  flex flex-col items-center w-full md:w-[95%] lg:h-[95%] bg-white rounded-sm mb-3">
-                                <FaCogs  className="mt-5 text-orange-500" size={35}/>
-                                <h3 className="lg:text-xl font-semibold md:text-lg text-md mt-2 text-[#262A3F]">
-                                    Outstanding Services
-                                </h3>
-                                <p className="text-center text-xs mt-2 mb-5">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur temporibus nostrum vero.
-                                </p>
-                            </motion.div>
-                            <motion.div {...cardHover} className="md:p-4 p-8 flex flex-col items-center w-full md:w-[95%] h-[95%] bg-white rounded-sm mb-3">
-                                <FaCogs  className="mt-5 text-orange-500" size={35}/>
-                                <h3 className="lg:text-xl font-semibold md:text-lg text-md mt-2 text-[#262A3F]">
-                                    Outstanding Services
-                                </h3>
-                                <p className="text-center text-xs mt-2 mb-5">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur temporibus nostrum vero.
-                                </p>
-                            </motion.div>
-                        </motion.div>
-                    </div>
-                </div>
-            </div>
             <div className="w-full lg:h-110 h-auto lg:flex lg:flex-row flex flex-col p-5 justify-between mt-15">
             <div className="lg:w-[50%] w-full h-auto  lg:h-full p-5">
                 <motion.h3 {...scrollUp} className="text-2xl font-semibold bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent h-10">

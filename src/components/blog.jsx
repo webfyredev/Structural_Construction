@@ -38,20 +38,20 @@ export default function Blog(){
     return(
         <>
             <div className="w-full h-auto flex flex-col items-center justify-evenly mt-15">
-            <motion.h2 {...scrollUp} className="text-3xl font-bold mt-3 bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent h-10">From Our Blogs</motion.h2>
-            <motion.p {...scrollUpNext} className="text-gray-600 max-w-2xl mx-auto  mb-5 md:mb-12 text-center text-xs md:text-sm">Stay updated with insights, trends, and innovations in the world of construction.</motion.p>
+              <motion.h2 {...scrollUp} className="text-3xl font-bold mt-3 bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent h-10">From Our Blogs</motion.h2>
+              <motion.p {...scrollUpNext} className="text-gray-600 max-w-2xl mx-auto  mb-5 md:mb-12 text-center text-xs md:text-sm">Stay updated with insights, trends, and innovations in the world of construction.</motion.p>
             </div>
-            <div className="w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5 overflow-hidden">
+            <div className="w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-3 lg:p-5 overflow-hidden">
             {blogs.map((data) =>(
-                <motion.div {...scrollLeft} className="w-full p-5 flex flex-col shadow-md rounded-sm group relative">
-                    <div className="absolute lg:top-55 md:top-45 top-60 top-[40%] right-7 text-xs font-semibold rounded-sm hover:cursor-pointer text-white px-7 py-1.5 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 bg-gradient-to-r from-orange-500 to-orange-400 z-1">
+                <motion.div {...scrollLeft} className="w-full p-5 flex flex-col shadow-md rounded-sm group relative overflow-hidden">
+                    <div className="absolute lg:top-48 md:top-45 top-60 top-[40%] right-7 text-xs font-semibold rounded-sm hover:cursor-pointer text-white px-7 py-1.5 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 bg-gradient-to-r from-orange-500 to-orange-400 z-1">
                         {data.category}
                     </div>
-                    <img src={data.image} className="rounded-md transition-all group-hover:scale-103" />
+                    <img src={data.image} className="h-48 md:h-52 object-cover rounded-md transition-all group-hover:scale-105 overflow-hidden" />
                     <h2 className="my-3 font-semibold text-[#262A4F]">{data.title}</h2>
                     <p className="text-sm text-gray-600">{data.description}</p>
-                    <Link className="mt-5 text-sm bg-gradient-to-r from-orange-500 to-orange-400 text-transparent bg-clip-text font-semibold h-10 flex">
-                        Read Blogs <FaChevronRight  className="mt-1.5 w-3 h-3 text-orange-500 ml-0.5"/>
+                    <Link className="mt-5 text-sm bg-gradient-to-r from-orange-500 to-orange-400 text-transparent bg-clip-text font-semibold h-10 flex group-hover:text-orange-600">
+                        Read Blogs <FaChevronRight  className="mt-1.5 w-3 h-3 text-orange-500 transition ml-0.5 group-hover:text-orange-600"/>
                     </Link>
                     <span className="w-full h-0.1 border-1 border-orange-500 opacity-10"></span>
                 </motion.div>

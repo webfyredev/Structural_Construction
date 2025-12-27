@@ -78,7 +78,7 @@ function SlideInner({ slide }) {
         </motion.h3>
 
         <motion.h1
-          className="text-3xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-orange-500 to-orange-400 text-transparent bg-clip-text"
+          className="w-full text-3xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-orange-500 to-orange-400 text-transparent bg-clip-text"
           initial={{ opacity: 0, x: -40 }}
           animate={isActive ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
           transition={{ delay: 0.15, duration: 0.7 }}
@@ -87,7 +87,7 @@ function SlideInner({ slide }) {
         </motion.h1>
 
         <motion.h1
-          className="text-3xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-orange-500 to-orange-400 text-transparent bg-clip-text"
+          className="w-full h-auto md:h-18 text-3xl md:text-5xl font-bold leading-tight bg-gradient-to-r from-orange-500 to-orange-400 text-transparent bg-clip-text"
           initial={{ opacity: 0, x: -40 }}
           animate={isActive ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
           transition={{ delay: 0.35, duration: 0.7 }}
@@ -96,7 +96,7 @@ function SlideInner({ slide }) {
         </motion.h1>
 
         <motion.p
-          className="text-sm md:text-base max-w-xl mb-6 text-white"
+          className="text-[13px] md:text-sm lg:text-base max-w-xl mb-6 text-white"
           initial={{ opacity: 0 }}
           animate={isActive ? { opacity: 1 } : { opacity: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
@@ -106,12 +106,12 @@ function SlideInner({ slide }) {
 
         <motion.a
           href="#projects"
-          className="bg-linear-to-r from-orange-500 to-orange-400 hover:bg-[#E59400] px-8 py-3 rounded-lg text-white font-medium flex"
+          className="bg-linear-to-r from-orange-500 to-orange-400 hover:bg-[#E59400] px-8 py-3 rounded-lg text-white font-medium flex text-sm"
           initial={{ opacity: 0, y: 12 }}
           animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
           transition={{ delay: 0.85, duration: 0.5 }} whileHover={{scale:1.05}} whileTap={{scale:0.95}}
         >
-          View Projects <FaChevronRight  className="mt-1.5 ml-1"/>
+          View Projects <FaChevronRight  className="hidden md:flex mt-1 md:mt-1 ml-0.5"/>
         </motion.a>
       </div>
     </div>
@@ -129,7 +129,7 @@ export default function HeroSlider() {
         autoplay={{ delay: 7000, disableOnInteraction: false }}
         navigation
         pagination={{ clickable: true }}
-        className="h-[90vh]"
+        className="w-full h-[90vh]"
       >
         {slides.map((s) => (
           <SwiperSlide key={s.id}>

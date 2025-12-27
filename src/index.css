@@ -1,7 +1,7 @@
 @import "tailwindcss";
-body{
-  width: 100vw;
-  height: 100vh;
+html, body{
+  /* width: 100vw;
+  height: 100vh; */
   overflow-x: hidden;
 }
 .swiper-button-next, .swiper-button-prev{
@@ -13,6 +13,12 @@ body{
 .swiper-button-next{
   @apply !right-5
 }
+#testimonials .swiper-button-prev {
+  @apply !left-[-10px]
+}
+#testimonials .swiper-button-next {
+  @apply !right-[-10px]
+}
 
 @media (max-width: 640px) {
   .swiper-button-next,
@@ -23,10 +29,10 @@ body{
 
 @media (max-width:768px) {
     .swiper-button-prev{
-      @apply !left-0
+      @apply !left-[-10px]
     }
     .swiper-button-next{
-      @apply !right-0
+      @apply !right-[-10px]
     }
 }
 .swiper-pagination-bullet{

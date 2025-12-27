@@ -42,7 +42,7 @@ export default function TestimonialSection() {
   ];
 
   return (
-    <section className="bg-gray-50 py-20" id="testimonials">
+    <section className="bg-gray-50 py-10" id="testimonials">
       <div className="text-center mb-12">
         <h3 className="text-3xl md:text-4xl font-bold text-orange-500">
           Client Reviews
@@ -52,7 +52,7 @@ export default function TestimonialSection() {
         </p>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto p-6">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           navigation
@@ -63,11 +63,11 @@ export default function TestimonialSection() {
           breakpoints={{
             768: { slidesPerView: 2 },
           }}
-          className="pb-12"
+          className="rounded-2xl"
         >
           {testimonials.map((testi, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all p-8 h-full flex flex-col justify-between">
+              <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all p-10 h-full flex flex-col justify-between">
                 <FaQuoteLeft className="text-3xl text-orange-500 mb-4" />
                 <p className="text-gray-600 italic leading-relaxed mb-6">
                   “{testi.message}”

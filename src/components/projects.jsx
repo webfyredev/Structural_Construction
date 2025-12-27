@@ -62,21 +62,24 @@ export default function ProjectsSection() {
             <motion.h2 {...scrollUp} className="text-3xl font-bold mt-3 bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent h-10">Our Recent Projects</motion.h2>
             <motion.p {...scrollUpNext} className="text-gray-600 max-w-2xl  mb-5 md:mb-5 text-center text-xs md:text-sm">Showcasing our commitment to quality construction and design excellence.</motion.p>
         </div>
-        <div className="w-full h-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-5  gap-5">
+        <div className="w-full h-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-5  gap-5 overflow-hidden">
             {projects.map((data, index) => (
-                <motion.div {...scrollLeft} className="w-full shadow-md group flex flex-col p-5 mb-5">
-                    <motion.img src={data.img} className="w-full h-60 lg:h-70 mb-3 cursor-pointer rounded-sm group-hover:scale-105 transition-transform duration-700"/>
-                    <div className="w-10 h-15 rounded-full mb-3 flex items-center justify-center text-xl text-orange-500">
-                        {data.icon}
-                    </div>
-                    <Link className="text-[#263A4F] font-semibold mb-3">
-                        {data.title}
-                    </Link>
+                <motion.div {...scrollLeft} className="w-full h-full shadow-md rounded-lg hover:shadow-lg transition group flex flex-col mb-5 overflow-hidden hover:rounded-xl">
+                    <motion.img src={data.img} className="w-full h-52 lg:h-62 object-cover cursor-pointer rounded-t-sm group-hover:scale-105 transition-transform duration-700 overflow-hidden"/>
+                    <div className="flex flex-col p-3">
+                        <div className="w-12 h-12 rounded-full mb-2 flex items-center justify-center text-xl text-orange-500">
+                          {data.icon}
+                        </div>
+                        <Link className="group-hover:text-orange-500 text-[#263A4F] font-semibold mb-2 transition">
+                            {data.title}
+                        </Link>
 
-                    <p className="text-sm mb-5 text-gray-500">{data.desc}</p>
-                    <motion.button {...cardHover} {...cardTaps} key={index} className="w-35 py-2.5 text-sm mb-3 cursor-pointer rounded-sm bg-gradient-to-r from-orange-500 to-orange-400 text-white font-semibold">
-                        <Link to="#">Check Projects</Link>
-                    </motion.button>
+                        <p className="text-sm mb-5 text-gray-500">{data.desc}</p>
+                        <motion.button {...cardHover} {...cardTaps} key={index} className="w-35 py-2.5 text-sm mb-3 cursor-pointer rounded-sm bg-gradient-to-r from-orange-500 to-orange-400 text-white font-semibold">
+                            <Link to="#">Check Projects</Link>
+                        </motion.button>
+                    </div>
+                    
                 </motion.div>
             ))}
         </div>

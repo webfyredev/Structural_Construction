@@ -6,21 +6,21 @@ export default function Footer(){
     const dates  = new Date().getFullYear();
     return(
         <>
-            <footer className="max-auto mx-w-7xl bg-[#1E293B] py-10 px-8">
+            <footer className="max-auto mx-w-7xl bg-[#1E293B] py-10 px-4 lg:px-8">
                 <div className="flex items-center">   
                     <Link to='/' className="text-3xl text-white hover:text-orange-400 transition-all duration-300 font-bold">Structura</Link>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10  mt-5 py-5">
-                    <div className="flex flex-col">
+                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5  mt-5 py-5">
+                    <div className="flex flex-col w-full">
                         <h3 className="font-semibold text-white mb-2">
                             About
                         </h3>
-                        <p className="text-[#CBD5E1] text-sm text-justify">
+                        <p className="text-[#CBD5E1] text-sm">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt maiores deserunt vitae, nisi sit enim modi cum, eligendi distinctio voluptates, voluptatum quo fugiat quae dolorum! Dolore fuga id voluptas. Aliquid!
                         </p>
                         
                     </div>
-                    <div className="flex flex-col md:ml-20">
+                    <div className="flex flex-col md:ml-15">
                         <h3 className="font-semibold text-white mb-2">
                             Links
                         </h3>
@@ -98,7 +98,7 @@ export default function Footer(){
                                 </Link>
                             </li>
                             <li>
-                                <Link to="phoneto:+2349131580378" className="flex  items-center text-[#CBD5E1] hover:text-orange-400 transition-all duration-500 text-sm">
+                                <Link to="tel:/+2349131580378" className="flex  items-center text-[#CBD5E1] hover:text-orange-400 transition-all duration-500 text-sm">
                                     <FaMobile  className="mr-1 mt-1"/> (+234 913 1580 378) 
                                 </Link>
                             </li>
