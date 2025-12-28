@@ -63,9 +63,9 @@ export default function Teams(){
                     </motion.p>
                     <div className="w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                         {team.map((data) =>(
-                            <motion.div {...scrollRight} key={data.id} className="w-full h-80 relative group overflow-hidden shadow-xl rounded-sm mb-5 lg:mb-0">
+                            <motion.div {...scrollRight} key={data.id} className="w-full h-80 relative group overflow-hidden shadow-xl rounded-xl  mb-5 lg:mb-0">
                                 <img src={data.image} className="w-full h-[80%] object-cover group-hover:scale-105 transition-transform duration-700"/>
-                                <div className="absolute top-4 right-4 flex-flex-col gap-2 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 bg-gradient-to-r from-orange-500 to-orange-400 px-4 py-1 rounded-sm">
+                                <div className="absolute top-4 right-4 flex-flex-col gap-2 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 bg-gradient-to-r from-orange-500 to-orange-400 px-4 py-1 rounded-xl">
                                     <Link to={data.f_url} className="text-white p-2 rounded-full">
                                         <FaFacebookF size={15} />
                                     </Link>
