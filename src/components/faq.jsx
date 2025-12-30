@@ -35,7 +35,7 @@ export default function FAQS(){
     return(
         <>
             <div className="w-full p-3 lg:p-10 bg-gray-50 flex flex-col items-center mt-10">
-                <motion.h2 {...scrollUp} className="mt-10 lg:mt-0 h-10 text-3xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-400 text-transparent bg-clip-text">
+                <motion.h2 {...scrollUp} className="mt-10 lg:mt-0 h-10 text-2xl md:text-3xl font-bold mb-3 bg-gradient-to-r from-orange-500 to-orange-400 text-transparent bg-clip-text text-center">
                     Frequently Asked Questions
                 </motion.h2>
                 <motion.p {...scrollUpNext} className="text-gray-600 text-[13px] md:text-sm text-center">

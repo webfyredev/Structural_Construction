@@ -2,12 +2,11 @@ import Header from "../components/Header";
 import NavBar from "../components/navbar";
 import TestimonialSection from "../components/testimonial";
 import aboutImg from '../images/header/hom (4).jpg'
-import aboutHeader from '../images/header/about.jpg'
+import aboutHeader from '../images/header/lot (3).jpg'
 import { motion } from "framer-motion";
 import { cardHover, cardTaps, scrollLeft, scrollUpNext, scrollUp, scrollRight} from "../animations/motion";
 import aboutSlider from '../images/header/abt_value.jpg'
 import Teams from "../components/team";
-import Features from "../components/features";
 import { FaCheck, FaHardHat } from "react-icons/fa";
 import { GiBrickWall } from "react-icons/gi";
 import {RiLightbulbFlashFill} from "react-icons/ri"
@@ -19,8 +18,19 @@ import StatsSection from "../components/stats";
 import abtImg1 from '../images/about/abt (1).jpg'
 import abtImg2 from '../images/about/abt (2).jpg'
 import abtImg3 from '../images/about/abt (3).jpg'
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function About (){
+    const {hash} = useLocation();
+    useEffect(() => {
+        if(hash){
+            const elements = document.querySelector(hash);
+            if(elements){
+                elements.scrollIntoView({behavior : "smooth"});
+            };
+        };
+    });
     useEffect(() =>{
         document.title = 'About | Structura_Construction'
     },[]);
@@ -31,27 +41,36 @@ export default function About (){
             page = 'About'
             img = {aboutHeader}
             />
-            <div className="w-full lg:h-110 h-auto lg:flex lg:flex-row p-3 lg:p-5 justify-between mt-10 flex flex-col lg:space-x-5">
+            <div className="w-full lg:h-110 h-auto lg:flex lg:flex-row p-3 lg:p-5 justify-between mt-0 lg:mt-10 flex flex-col lg:space-x-5">
                 <motion.div {...scrollLeft} className="w-full  md:w-full md:h-[45%] lg:w-1/2 lg:h-full h-[45%] md:h-[45%] p-2 lg:p-3 mb-5 lg:mb-0">
                     <h2 className="text-2xl md:text-3xl text-[#262A4F] font-semibold my-5 ">
                         We are the expart on this field better solution since 2000.
                     </h2>
                     <p className="text-xs md:text-sm text-gray-500 mb-5 text-justify">
-                        We are committed to building a sustainable future by fostering a collaborative spirit that creates exceptional experiences, balanced relationships, and community built environment. Building isn’t just job. It's our passion. With every project we undertake, we set the bar high and provide the best industry.
+                        We are committed to building a sustainable future by delivering projects that combine quality craftsmanship, innovation, and reliability. Through teamwork and careful planning, we create environments that add value to the people and communities who use them.
                     </p>
+
                     <p className="text-xs md:text-sm text-gray-500 mb-5 text-justify">
-                        Building isn't just job. It's our passion. With every project we undertake, we set the bar high and provide the best industry.
+                        Building isn’t just our job — it’s what drives us. Every project is an opportunity to set a higher standard, pay attention to the details, and provide solutions our clients can depend on.
                     </p>
                     <div className="flex space-x-5 items-left">
-                        <motion.button {...cardHover} {...cardTaps} className="px-6 md:px-8 py-2.5  text-sm rounded-sm bg-gradient-to-r from-orange-500 to-orange-400 font-semibold text-white cursor-pointer ">More About Us</motion.button>
-                        <motion.button {...cardHover} {...cardTaps} className="px-6 md:px-8 py-2.5  text-sm rounded-sm bg-gradient-to-r from-orange-500 to-orange-400 font-semibold text-white cursor-pointer">Get In Touch</motion.button>
+                        <motion.button {...cardHover} {...cardTaps} className="px-6 md:px-8 py-2.5  text-sm rounded-sm bg-gradient-to-r from-orange-500 to-orange-400 font-semibold text-white cursor-pointer ">
+                            <a href="#about_more">
+                                More About Us
+                            </a>
+                        </motion.button>
+                        <motion.button {...cardHover} {...cardTaps} className="px-6 md:px-8 py-2.5  text-sm rounded-sm bg-gradient-to-r from-orange-500 to-orange-400 font-semibold text-white cursor-pointer">
+                            <Link to="/contacts#contact">
+                                Get In Touch
+                            </Link>
+                        </motion.button>
 
                     </div>
                 </motion.div>
                 <motion.img {...scrollRight} src={aboutImg}  className="p-2 lg:p-0 w-full lg:w-1/2 rounded-xl lg:h-full h-70 md:h-100 object-cover hover:scale-99 transition duration-200"/>
 
             </div>
-            <div className="w-full p-3 lg:p-5 my-5 lg:flex lg:flex-row flex flex-col space-x-10">
+            <div className="w-full p-3 lg:p-5 my-5 lg:flex lg:flex-row flex flex-col space-x-10" id="about_more">
                 <motion.div {...scrollLeft} className="w-full lg:w-1/2 p-2 lg:p-5 relative group overflow-hidden ">
                     <img src={abtImg1} className="w-full md:h-100 lg:h-120 object-cover rounded-xl" alt="" />
                     <img src={abtImg2} className="hidden md:flex object-cover absolute bottom-10 right-10 border-2 border-white z-1 w-50 h-40 lg:w-70 lg:h-50 rounded-xl group-hover:scale-105 transition overflow-hidden" alt="" />
@@ -89,7 +108,6 @@ export default function About (){
 
             </div>
             <StatsSection />
-            {/* <Features /> */}
             <div className="w-full p-3 lg:p-5 mt-10 flex flex-col items-center">
                 <motion.h2 {...scrollUp} className="text-3xl font-bold mb-2 text-orange-500 text-center">How We Work</motion.h2>
                 <motion.p {...scrollUpNext} className="text-gray-600 max-w-2xl mx-auto mb-5 text-center text-[13px] md:text-sm">

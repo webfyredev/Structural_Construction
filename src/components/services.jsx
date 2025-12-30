@@ -55,7 +55,7 @@ const services = [
 export default function ServicesComponents(){
     return(
         <>
-            <div className="w-full h-auto flex flex-col items-center justify-evenly mt-15">
+            <div className="w-full h-auto flex flex-col items-center justify-evenly mt-15" id="service">
                 <motion.h2 {...scrollUp} className="text-3xl font-bold mt-3 bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent h-10">Our Services</motion.h2>
                 <motion.p {...scrollUpNext} className="text-gray-600 max-w-2xl mx-auto mb-10 text-center text-xs md:text-sm">Showcasing our commitment to quality construction and design excellence.</motion.p>
             </div>

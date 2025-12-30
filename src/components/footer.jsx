@@ -87,7 +87,7 @@ export default function Footer(){
                         </ul>   
                     </div>
                     
-                    <div className="flex flex-col">
+                    <div className="flex flex-col md:ml-15 lg:ml-0">
                         <h3 className="font-semibold text-white mb-2">
                             Contact
                         </h3>

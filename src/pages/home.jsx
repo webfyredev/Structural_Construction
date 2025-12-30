@@ -6,7 +6,6 @@ import { FaBuilding, FaDraftingCompass, FaTools } from "react-icons/fa";
 import { cardHover, scrollLeft, cardTaps, scrollRight} from '../animations/motion';
 import { Link } from 'react-router-dom';
 import { GiCrane } from "react-icons/gi";
-import Features from '../components/features';
 import ServicesComponents from '../components/services';
 import semBg from '../images/explorebg.jpg'
 import semBg2 from '../images/explorebg2.jpg'
@@ -35,14 +34,14 @@ export default function Home() {
         <h1 className='my-5 h-20 lg:text-3xl md:text-2xl text-xl font-semibold bg-linear-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent'>
           Delivering Excellence Through <br /> Every Brick and Beam
         </h1>
-        <p className='w-[90%] text-justify text-gray-500 text-xs md:text-[15px] mb-5'>
+        <p className='w-[90%] text-justify text-gray-500 text-xs md:text-[13px] mb-5'>
           We believe in shaping the future with every structure we build — 
           where innovation meets craftsmanship. Our team works hand in 
           hand to create spaces that inspire trust, strength, and comfort. 
           Construction to us isn’t just about walls and steel; it’s about purpose, 
           passion, and precision. With each project, we aim higher and deliver beyond expectations.
         </p>
-        <p className='w-[90%] text-justify text-gray-500 text-xs  md:text-[15px] mb-7'>
+        <p className='w-[90%] text-justify text-gray-500 text-xs  md:text-[13px] mb-7'>
           Building isn't just job. It's our passion. With every project we undertake, 
           we set the bar high and provide the best industry.
         </p>
@@ -77,7 +76,6 @@ export default function Home() {
         </div>
       </motion.div>
     </div>
-    <Features />
     <ServicesComponents />
     <div className='w-full lg:h-100 h-auto flex flex-col items-center lg:flex lg:flex-row lg:justify-evenly lg:items-center lg:px-15 py-5 lg:mb-10 mb-5'>
       <motion.img {...scrollLeft} src={homBg1} className='lg:w-[45%] lg:h-[95%] object-cover rounded-sm w-[90%] md:w-[95%] h-70 md:h-100'/>
@@ -93,7 +91,11 @@ export default function Home() {
           craftsmanship, we turn visions into enduring landmarks that shape communities and 
           inspire generations.
         </p>
-        <motion.button {...cardHover} {...cardTaps} className='w-45 py-3 text-sm cursor-pointer bg-linear-to-r from-orange-500 to-orange-400 text-white font-semibold rounded-sm'>Get Our Services</motion.button>
+        <motion.button {...cardHover} {...cardTaps} className='w-45 py-3 text-sm cursor-pointer bg-linear-to-r from-orange-500 to-orange-400 text-white font-semibold rounded-sm'>
+          <Link to="/services#service">
+            Get Our Services
+          </Link>
+        </motion.button>
 
       </motion.div>
     </div>
@@ -110,7 +112,11 @@ export default function Home() {
           we focus on detail, durability, and client satisfaction — because every 
           structure we raise tells a story of trust and vision.
         </p>
-        <motion.button {...cardHover} {...cardTaps} className='w-45 py-3 text-sm cursor-pointer bg-linear-to-r from-orange-500 to-orange-400 text-white font-semibold rounded-sm'>Get Our Services</motion.button>
+        <motion.button {...cardHover} {...cardTaps} className='w-45 py-3 text-sm cursor-pointer bg-linear-to-r from-orange-500 to-orange-400 text-white font-semibold rounded-sm'>
+          <Link to="/services#service">
+            Get Our Services
+          </Link>
+        </motion.button>
 
       </motion.div>
       <motion.img {...scrollLeft} src={homBg2} className='w-[90%] md:w-[95%] h-70 md:h-100 lg:w-[45%] lg:h-[95%] object-cover rounded-sm' />
@@ -127,8 +133,8 @@ export default function Home() {
           <div className="md:w-[75%] h-60 flex flex-col items-center mt-5 lg:mt-0">
               <h1 className="text-2xl lg:text-4xl md:text-3xl font-bold text-white text-center md:my-5 mt-5 mb-3">Read To Build <br /> Your Dream Projects</h1>
               <p className="text-gray-200 mb-5 text-center text-xs md:text-sm">Let's make your next project stronger, smarter, and built to last?</p>
-              <motion.button {...cardHover} {...cardTaps} className="px-10 py-2.5 bg-white font-semibold text-orange-500 rounded-sm cursor-pointer">
-                  <Link to='/contacts'>
+              <motion.button {...cardHover} {...cardTaps} className="px-10 py-2.5 bg-white font-semibold text-orange-500 rounded-sm cursor-pointer text-sm md:text-base">
+                  <Link to='/contacts#contact'>
                       Get In Touch
                   </Link>
               </motion.button>

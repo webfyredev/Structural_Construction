@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import PartnersSlider from "../components/logoSlider";
 import NavBar from "../components/navbar";
-import aboutHeader from '../images/header/service.jpg'
+import aboutHeader from '../images/header/not (3).jpg'
 import ServicesComponents from "../components/services";
 import Values from "../components/values";
 import Footer from "../components/footer";
@@ -10,11 +10,21 @@ import { motion } from "framer-motion";
 import { scrollLeft, scrollUp, scrollUpNext } from "../animations/motion";
 import { benefits } from "../data/service";
 import FAQS from "../components/faq";
+import { useLocation } from "react-router-dom";
 
 export default function Services(){
     useEffect(() =>{
         document.title = 'Services | Structura_Construction'
     }, []);
+    const {hash} = useLocation();
+    useEffect(() => {
+        if(hash){
+            const elements = document.querySelector(hash);
+            if(elements){
+                elements.scrollIntoView({behavior : "smooth"})
+            }
+        }
+    })
     return(
         <>
             <NavBar />

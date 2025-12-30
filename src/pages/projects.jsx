@@ -6,12 +6,14 @@ import projectImg2 from '../images/header/header (3).jpg'
 import projectImg3 from '../images/header/header (7).jpg'
 import projectImg4 from '../images/header/header (12).jpg'
 import projectImg5 from '../images/header/header (13).jpg'
-import { FaHammer, FaBuilding, FaCogs, FaMapMarker, FaRegClock, FaRegBuilding } from "react-icons/fa";
+import { FaHammer, FaBuilding, FaCogs, FaMapMarker, FaRegClock, FaRegBuilding, FaArrowRight } from "react-icons/fa";
 import { cardHover, cardTaps, scrollLeft, scrollRight, cardZoomIn, scrollUp, scrollUpNext} from "../animations/motion";
 import { motion } from "framer-motion";
 import Footer from "../components/footer";
 import { useEffect } from "react";
-import { featured_projects } from "../data/project";
+import { featured_projects, project_transformation } from "../data/project";
+import Projects_Feedbacks from "../components/feedbacks";
+import { useLocation } from "react-router-dom";
 
 
 
@@ -19,6 +21,15 @@ export default function Projects(){
     useEffect(() =>{
         document.title = 'Projects | Structura_Construction'
     }, []);
+    const {hash} = useLocation();
+    useEffect(() => {
+        if(hash){
+            const elements = document.querySelector(hash);
+            if(elements){
+                elements.scrollIntoView({behavior: "smooth"})
+            }
+        }
+    })
     return(
         <>
             <NavBar />
@@ -26,7 +37,7 @@ export default function Projects(){
             page = 'Projects'
             img = {projectImg}
             />
-            <div className="w-full p-3 lg:p-10 mt-10 flex flex-col items-center">
+            <div className="w-full p-3 lg:p-10 mt-10 flex flex-col items-center" id="project">
                 <motion.h2 {...scrollUp} className="text-3xl font-bold mt-3 bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent h-10">Featured Projects</motion.h2>
                 <motion.p {...scrollUpNext} className="text-gray-600 max-w-2xl  mb-5 md:mb-5 text-center text-xs md:text-sm">A showcase of some of our signature projects delivered with precision, quality, and trsuted expertise</motion.p>
                 <div className="w-full md:w-[95%] mt-5 p-2 lg:p-5 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-5">
@@ -58,58 +69,92 @@ export default function Projects(){
                 </div>
             </div>
             <ProjectsSection />
-            <div className="w-full lg:h-110 h-auto lg:flex lg:flex-row flex flex-col p-5 justify-between mt-15">
-            <div className="lg:w-[50%] w-full h-auto  lg:h-full p-5">
-                <motion.h3 {...scrollUp} className="text-2xl font-semibold bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent h-10">
-                    Building Products That Last a Lifetime
-                </motion.h3>
-                <motion.p {...scrollUpNext} className="text-gray-600 text-justify text-xs mb-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, tenetur amet, praesentium cum quas nihil consectetur error aliquid, voluptatem blanditiis nisi? Fugiat consequatur deserunt laboriosam earum doloremque molestias cumque praesentium minima impedit qui. Odio doloremque animi quos, hic minima quam.
-                </motion.p>
-                <motion.p {...scrollUpNext} className="text-gray-600 text-justify text-xs mb-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, tenetur amet, praesentium cum quas nihil consectetur error aliquid, voluptatem blanditiis nisi? Fugiat consequatur deserunt laboriosam earum doloremque molestias cumque praesentium minima impedit qui. Odio doloremque animi quos, hic minima quam.
-                </motion.p>
-                <motion.div {...scrollRight} className="w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 md:py-4 md:mt-10 py-2 gap-3">
-                    <motion.div {...cardHover} {...cardTaps} className="w-full flex flex-row justify-left w-full h-auto shadow-md items-center md:p-2.5 p-4 hover:cursor-pointer mb-3 md:mb-0">
-                        <FaHammer  className="text-white bg-gradient-to-r from-orange-500 to-orange-400  w-8 h-8 p-2 rounded-sm mr-2"/>
-                        <div className="h-auto">
-                            <h3 className="text-[#262A4F] font-semibold">Quality Materials</h3>
-                            <p className="text-[10px] text-gray-900">Lorem, ipsum dolor.</p>
-                        </div>
+            <div className="w-full lg:h-110 h-auto lg:flex lg:flex-row flex flex-col p-3 lg:p-5 justify-between mt-15">
+                <div className="lg:w-[50%] w-full h-auto  lg:h-full p-2 lg:p-5">
+                    <motion.h3 {...scrollUp} className="text-2xl font-semibold bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent h-10">
+                        Building Products That Last a Lifetime
+                    </motion.h3>
+                    <motion.p {...scrollUpNext} className="text-gray-600 text-justify text-xs md:text-[13px] mb-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, tenetur amet, praesentium cum quas nihil consectetur error aliquid, voluptatem blanditiis nisi? Fugiat consequatur deserunt laboriosam earum doloremque molestias cumque praesentium minima impedit qui. Odio doloremque animi quos, hic minima quam.
+                    </motion.p>
+                    <motion.p {...scrollUpNext} className="text-gray-600 text-justify text-xs md:text-[13px] mb-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, tenetur amet, praesentium cum quas nihil consectetur error aliquid, voluptatem blanditiis nisi? Fugiat consequatur deserunt laboriosam earum doloremque molestias cumque praesentium minima impedit qui. Odio doloremque animi quos, hic minima quam.
+                    </motion.p>
+                    <motion.div {...scrollRight} className="w-full grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 md:py-4 md:mt-10 py-2 gap-3">
+                        <motion.div {...cardHover} {...cardTaps} className="w-full flex flex-row justify-left w-full h-auto shadow-md items-center md:p-2.5 p-4 hover:cursor-pointer mb-3 md:mb-0">
+                            <FaHammer  className="text-white bg-gradient-to-r from-orange-500 to-orange-400  w-8 h-8 p-2 rounded-sm mr-2"/>
+                            <div className="h-auto">
+                                <h3 className="text-[#262A4F] font-semibold">Quality Materials</h3>
+                                <p className="text-[10px] text-gray-900">Lorem, ipsum dolor.</p>
+                            </div>
+                        </motion.div>
+                        <motion.div {...cardHover} {...cardTaps} className="w-[90%] flex flex-row justify-left w-full h-auto shadow-md items-center md:p-2.5 p-4 hover:cursor-pointer mb-3 md:mb-0">
+                            <FaBuilding  className="text-white bg-gradient-to-r from-orange-500 to-orange-400  w-8 h-8 p-2 rounded-sm mr-2"/>
+                            <div className="h-auto">
+                                <h3 className="text-[#262A4F] font-semibold text-sm">Expert Execution</h3>
+                                <p className="text-[10px] text-gray-900">Lorem, ipsum dolor.</p>
+                            </div>
+                        </motion.div>
+                        <motion.div {...cardHover} {...cardTaps} className="w-[85%] flex flex-row justify-left w-full h-auto shadow-md items-center md:p-2.5 p-4 hover:cursor-pointer">
+                            <FaCogs  className="text-white bg-gradient-to-r from-orange-500 to-orange-400  w-8 h-8 p-2 rounded-sm mr-2"/>
+                            <div className="h-auto">
+                                <h3 className="text-[#262A4F] font-semibold text-sm">Innovative Design</h3>
+                                <p className="text-[10px] text-gray-900">Lorem, ipsum dolor.</p>
+                            </div>
+                        </motion.div>
                     </motion.div>
-                    <motion.div {...cardHover} {...cardTaps} className="w-[90%] flex flex-row justify-left w-full h-auto shadow-md items-center md:p-2.5 p-4 hover:cursor-pointer mb-3 md:mb-0">
-                        <FaBuilding  className="text-white bg-gradient-to-r from-orange-500 to-orange-400  w-8 h-8 p-2 rounded-sm mr-2"/>
-                        <div className="h-auto">
-                            <h3 className="text-[#262A4F] font-semibold text-sm">Expert Execution</h3>
-                            <p className="text-[10px] text-gray-900">Lorem, ipsum dolor.</p>
-                        </div>
-                    </motion.div>
-                    <motion.div {...cardHover} {...cardTaps} className="w-[85%] flex flex-row justify-left w-full h-auto shadow-md items-center md:p-2.5 p-4 hover:cursor-pointer">
-                        <FaCogs  className="text-white bg-gradient-to-r from-orange-500 to-orange-400  w-8 h-8 p-2 rounded-sm mr-2"/>
-                        <div className="h-auto">
-                            <h3 className="text-[#262A4F] font-semibold text-sm">Innovative Design</h3>
-                            <p className="text-[10px] text-gray-900">Lorem, ipsum dolor.</p>
-                        </div>
-                    </motion.div>
-                </motion.div>
-            </div>
-            <div className="w-full h-auto lg:w-[45%] lg:h-full lg:flex lg:flex-row flex flex-col overflow-hidden">
-                <div className="lg:w-[45%] lg:h-full w-full h-auto md:flex md:flex-row lg:flex-col flex flex-col px-3 justify-evenly mb-5 md:mb-0">
-                    <motion.img {...cardZoomIn} {...scrollRight} src={projectImg2} className="md:w-[45%] lg:w-full lg:h-[45%] w-full object-cover hover:cursor-pointer hover:rounded-sm mb-2 md:mb-0"/>
-                    <motion.img {...cardZoomIn} {...scrollRight} src={projectImg3}  className="md:w-[45%] lg:w-full lg:h-[45%] w-full object-cover hover:cursor-pointer hover:rounded-sm mb-2 md:mb-0"/>
-
                 </div>
-                <div className="lg:w-[45%] lg:h-full w-full h-auto md:flex md:flex-row lg:flex-col flex flex-col px-3 justify-evenly my-5 lg:mb-0 lg:mt-0">
-                    <motion.img {...cardZoomIn} {...scrollRight} src={projectImg4} className="md:w-[45%] lg:w-full lg:h-[45%] w-full object-cover hover:cursor-pointer hover:rounded-sm mb-2 md:mb-0"/>
-                    <motion.img {...cardZoomIn} {...scrollRight} src={projectImg5}  className="md:w-[45%] lg:w-full lg:h-[45%] w-full object-cover hover:cursor-pointer hover:rounded-sm mb-2 md:mb-0"/>
+                <div className="w-full h-auto lg:w-[45%] lg:h-full lg:flex lg:flex-row flex flex-col overflow-hidden">
+                    <div className="lg:w-[45%] lg:h-full w-full h-auto md:flex md:flex-row lg:flex-col flex flex-col px-3 justify-evenly mb-5 md:mb-0">
+                        <motion.img  {...scrollRight} src={projectImg2} className="md:w-[45%] lg:w-full lg:h-[45%] w-full object-cover hover:cursor-pointer hover:rounded-sm mb-2 md:mb-0"/>
+                        <motion.img {...scrollRight} src={projectImg3}  className="md:w-[45%] lg:w-full lg:h-[45%] w-full object-cover hover:cursor-pointer hover:rounded-sm mb-2 md:mb-0"/>
 
+                    </div>
+                    <div className="lg:w-[45%] lg:h-full w-full h-auto md:flex md:flex-row lg:flex-col flex flex-col px-3 justify-evenly my-5 lg:mb-0 lg:mt-0">
+                        <motion.img  {...scrollRight} src={projectImg4} className="md:w-[45%] lg:w-full lg:h-[45%] w-full object-cover hover:cursor-pointer hover:rounded-sm mb-2 md:mb-0"/>
+                        <motion.img  {...scrollRight} src={projectImg5}  className="md:w-[45%] lg:w-full lg:h-[45%] w-full object-cover hover:cursor-pointer hover:rounded-sm mb-2 md:mb-0"/>
+
+                    </div>
                 </div>
-                {/* <div className="lg:w-[45%] w-full h-full lg:flex lg:flex-col md:flex md:flex-row px-3 justify-evenly ">
-                    <motion.img {...cardZoomIn} {...scrollRight} src={projectImg4} className="md:w-[45%] lg:h-full lg:h-[45%] object-cover hover:cursor-pointer hover:rounded-sm mb-2"/>
-                    <motion.img {...cardZoomIn} {...scrollRight} src={projectImg5} className="md:w-[45%] lg:w-full lg:h-[45%] object-cover hover:cursor-pointer hover:rounded-sm mb-2"/>
-                </div> */}
             </div>
+            <div className="w-full p-3 lg:p-10 flex flex-col items-center bg-gray-50">
+                <motion.h2 {...scrollUp} className="text-3xl font-bold mt-10 lg:mt-3 bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent h-10">Before & After Transformation</motion.h2>
+                <motion.p {...scrollUpNext} className="text-gray-600 max-w-2xl  mb-5 md:mb-5 text-center text-xs md:text-sm">
+                    A look at how we transform spaces through quality construction and expert craftsmanship.
+                </motion.p>   
+                <div className="w-full lg:w-[90%] p-2 lg:p-5 flex flex-col space-y-5">
+                    {project_transformation.map((project) => (
+                        <div className="w-full lg:p-5 flex flex-col items-center mt-5 lg:mt-0">
+                            <motion.h3 {...scrollRight} className="font-semibold text-[#262A4F]">
+                                {project.title}
+                            </motion.h3>
+                            <motion.div {...scrollUp} className="w-full mt-3 lg:flex lg:flex-row lg:space-x-5 flex flex-col space-y-5 lg:space-y-0">
+                                <div className="w-full lg:w-1/2 relative group overflow-hidden">
+                                    <img src={project.before} alt={project.title} className="w-full h-48 md:h-62 object-cover group-hover:scale-103 transition duration-300" />
+                                    <div className="absolute w-full h-full top-0 left-0 inset-0 bg-black/25 hover:bg-black/10 transition duration-300 cursor-pointer">
+                                        <p className="absolute top-3 left-1/2 text-center font-semibold text-base md:text-xl text-white group-hover:hidden">
+                                            Before
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="w-full lg:w-1/2 relative group overflow-hidden">
+                                    <img src={project.after} alt={project.title} className="w-full h-48 md:h-62 object-cover group-hover:scale-103 transition duration-300" />
+                                    <div className="absolute w-full h-full top-0 left-0 inset-0 bg-black/25 hover:bg-black/10 transition duration-300 cursor-pointer">
+                                        <p className="absolute top-3 left-1/2 text-center font-semibold text-base md:text-xl text-white group-hover:hidden">
+                                            After
+                                        </p>
+                                    </div>
+                                </div>
+                            </motion.div>
+                            <hr  className="w-full border-1 mt-3 text-[#262A4F] opacity-10"/>
+                            <motion.h3 {...scrollRight} className="font-semibold text-[#262A4F] text-xl mt-2">
+                                {project.title}
+                            </motion.h3>
+                        </div>
+                    ))}
+                </div>
             </div>
+            <Projects_Feedbacks />
             <Footer />
         </>
     );

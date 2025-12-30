@@ -8,9 +8,9 @@ export default function NavBar(){
     const [isOpen, setIsOpen] = useState(false)
     return(
         <>
-        <nav className="w-full relative flex justify-between items-center px-5 md:px-8 py-4 border-b border-orange-200 ">
-            <NavLink to="/" className="font-bold text-xl md:text-2xl bg-linear-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent flex items-center">
-                <img src={logo} className="w-10 h-auto" />
+        <nav className="w-full relative flex justify-between items-center px-3 md:px-8 py-4 border-b border-orange-200 ">
+            <NavLink to="/" className="font-bold text-xl bg-linear-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent flex items-center">
+                <img src={logo} className="w-8 h-auto" />
                 STRUCTURA
             </NavLink>
             <ul className="hidden md:hidden lg:flex items-center mr-10">
@@ -35,24 +35,24 @@ export default function NavBar(){
                     </NavLink>
                 </button>
             </ul>
-            <button className="lg:hidden flex md:flex cursor-pointer mr-5 text-orange-500" onClick={() => setIsOpen(!isOpen)}>{isOpen ? <FaTimes size={20}/> : <FaBars size={20} />}</button>
+            <button className="lg:hidden flex md:flex cursor-pointer mr-3 text-orange-500" onClick={() => setIsOpen(!isOpen)}>{isOpen ? <FaTimes size={20}/> : <FaBars size={20} />}</button>
             {isOpen && (
-                <motion.div {...scrollUp} className="lg:hidden w-full h-auto flex flex-col absolute top-15 z-1000 left-0 bg-gradient-to-r from-orange-500 to-orange-400 p-2">
-                    <ul className="flex flex-col space-y-3">
+                <motion.div {...scrollUp} className="lg:hidden w-full h-auto flex flex-col absolute top-16 z-1000 left-0 p-2 bg-gray-50 shadow-lg">
+                    <ul className="flex flex-col space-y-3 mb-5">
                         <li>
-                            <NavLink to='/' className="flex items-center w-full text-left h-10 border-1 border-orange-400 hover:bg-orange-400 cursor-pointer hover:font-semibold text-white text-sm p-3 rounded-sm transition-all duration-300">Home</NavLink>
+                            <NavLink to='/' className="flex items-center w-full text-left h-10 text-orange-500 hover:bg-orange-100 cursor-pointer hover:font-semibold text-[13px] px-3 py-3 md:px-6 rounded-sm transition-all duration-300">Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/about' className="flex items-center w-full text-left h-10 border-1 border-orange-400 hover:bg-orange-400 cursor-pointer hover:font-semibold text-white text-sm p-3 rounded-sm transition-all duration-300">About</NavLink>
+                            <NavLink to='/about' className="flex items-center w-full text-left h-10 text-orange-500 hover:bg-orange-100 cursor-pointer hover:font-semibold text-[13px] px-3 py-3 md:px-6 rounded-sm transition-all duration-300">About</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/services' className="flex items-center w-full text-left h-10 border-1 border-orange-400 hover:bg-orange-400 cursor-pointer hover:font-semibold text-white text-sm p-3 rounded-sm transition-all duration-300">Services</NavLink>
+                            <NavLink to='/services' className="flex items-center w-full text-left h-10 text-orange-500 hover:bg-orange-100 cursor-pointer hover:font-semibold text-[13px] px-3 py-3 md:px-6 rounded-sm transition-all duration-300">Services</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/projects' className="flex items-center w-full text-left h-10 border-1 border-orange-400 hover:bg-orange-400 cursor-pointer hover:font-semibold text-white text-sm p-3 rounded-sm transition-all duration-300">Projects</NavLink>
+                            <NavLink to='/projects' className="flex items-center w-full text-left h-10 text-orange-500 hover:bg-orange-100 cursor-pointer hover:font-semibold text-[13px] px-3 py-3 md:px-6 rounded-sm transition-all duration-300">Projects</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/contacts' className="flex items-center w-full text-left h-10 border-1 border-orange-400 hover:bg-orange-400 cursor-pointer hover:font-semibold text-white text-sm p-3 rounded-sm transition-all duration-300">Contacts</NavLink>
+                            <NavLink to='/contacts' className="flex items-center w-full text-left h-10 text-orange-500 hover:bg-orange-100 cursor-pointer hover:font-semibold text-[13px] px-3 py-3 md:px-6 rounded-sm transition-all duration-300">Contacts</NavLink>
                         </li>
                     </ul>
                 </motion.div>

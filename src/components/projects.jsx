@@ -62,10 +62,10 @@ export default function ProjectsSection() {
             <motion.h2 {...scrollUp} className="text-3xl font-bold mt-3 bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent h-10">Our Recent Projects</motion.h2>
             <motion.p {...scrollUpNext} className="text-gray-600 max-w-2xl  mb-5 md:mb-5 text-center text-xs md:text-sm">Showcasing our commitment to quality construction and design excellence.</motion.p>
         </div>
-        <div className="w-full h-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-5  gap-5 overflow-hidden">
+        <div className="w-full h-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-3 lg:p-10 gap-5 overflow-hidden">
             {projects.map((data, index) => (
                 <motion.div {...scrollLeft} className="w-full h-full shadow-md rounded-lg hover:shadow-lg transition group flex flex-col mb-5 overflow-hidden hover:rounded-xl transition">
-                    <motion.img src={data.img} className="w-full h-52 lg:h-60 object-cover cursor-pointer rounded-t-sm group-hover:scale-105 transition-transform duration-700 overflow-hidden"/>
+                    <motion.img src={data.img} className="w-full h-52 object-cover cursor-pointer rounded-t-sm group-hover:scale-105 transition-transform duration-700 overflow-hidden"/>
                     <div className="flex flex-col p-3">
                         <div className="w-12 h-12 rounded-full mb-2 flex items-center justify-center text-xl text-orange-500">
                           {data.icon}
@@ -74,9 +74,11 @@ export default function ProjectsSection() {
                             {data.title}
                         </Link>
 
-                        <p className="text-sm mb-5 text-gray-500">{data.desc}</p>
+                        <p className="text-sm mb-3 text-gray-500">{data.desc}</p>
                         <motion.button {...cardHover} {...cardTaps} key={index} className="w-35 py-2.5 text-sm mb-3 cursor-pointer rounded-sm bg-gradient-to-r from-orange-500 to-orange-400 text-white font-semibold">
-                            <Link to="#">View Details</Link>
+                            <Link to="/projects#project">
+                              View Details
+                            </Link>
                         </motion.button>
                     </div>
                     
