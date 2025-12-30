@@ -118,7 +118,9 @@ export default function Projects(){
                 </div>
             </div>
             <div className="w-full p-3 lg:p-10 flex flex-col items-center bg-gray-50">
-                <motion.h2 {...scrollUp} className="text-3xl font-bold mt-10 lg:mt-3 bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent h-10">Before & After Transformation</motion.h2>
+                <motion.h2 {...scrollUp} className="text-2xl md:text-3xl font-bold mt-10 lg:mt-3 bg-gradient-to-r from-orange-500 to-orange-400 bg-clip-text text-transparent h-10 text-center">
+                    Before & After Transformation
+                </motion.h2>
                 <motion.p {...scrollUpNext} className="text-gray-600 max-w-2xl  mb-5 md:mb-5 text-center text-xs md:text-sm">
                     A look at how we transform spaces through quality construction and expert craftsmanship.
                 </motion.p>   
